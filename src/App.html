@@ -1,0 +1,85 @@
+<main>
+  <div class="pageContainer column" id="pageContainer" style="opacity: 100">
+    <div style="margin-bottom: 20px">
+      <h2 id="worksheet_title" class="worksheet_title">TITLE</h2>
+      <h4 id="worksheet_desc_text">Fill in the blanks with words from the Word Bank</h4>
+    </div>
+
+    <div class="row columns-container">
+      <div class="matched-items-container">
+        <div class="column">
+          <ol id="questions-container"></ol>
+        </div>
+      </div>
+
+      <div class="column cards-stack-container">
+        <h2 class="column-title">{{word}}</h2>
+
+        <div class="words-container">
+          <div id="words-container"></div>
+
+          <div class="hint_container">
+            <img src="./assets/img/Arrow2.svg" id="arrow" />
+            <span class="hint_message">
+              DRAG CARD <br />
+              TO FILL IN <br />
+              BLANK
+            </span>
+          </div>
+          <div class="final_hint_container" style="display: none">
+            <img src="./assets/img/Arrow2.svg" />
+            You can still change your answers by switching cards.
+          </div>
+
+          <div class="finish-message-wrap" id="finish-message-wrap">
+            <div class="finish-flow">
+              <div class="score-container" style="opacity: 0">
+                <div>
+                  <img src="./assets/img/StarIcon.svg" />
+                  <span>SCORE:</span>
+                </div>
+
+                <div class="score">&nbsp;</div>
+
+                <div class="score-comment">&nbsp;</div>
+              </div>
+
+              <div class="finish-message-check">
+                <img src="./assets/img/CheckmarkIcon.svg" />
+                <span class="finish-message-check-text" data-alternate_text="COMPLETED!">REVIEW:</span>
+              </div>
+
+              <p class="finish-message-question">Ready to submit your answers?</p>
+
+              <div class="buttons-container">
+                <p>
+                  <button class="btn btn-ok btn-finish" onclick="submitAnswers()">SUBMIT</button>
+                </p>
+                <p>
+                  <button class="btn btn-warn btn-restart" id="btn-finish">RESTART</button>
+                </p>
+                <p style="display: none">
+                  <button class="btn btn-red btn-see-score" data-alternate_text="HIDE SCORE">SEE SCORE</button>
+                </p>
+                <p style="display: none">
+                  <a class="btn btn-green btn-download-pdf">
+                    <span class="download-icon"></span>
+                    DOWNLOAD PDF
+                  </a>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row-reverse read_instructions_btn_container" id="read_instructions_btn_container">
+      <a class="btn read_instructions" id="read_instructions">
+        <div class="btn-content">
+          <img src="./assets/img/InstructionsIcon.svg" />
+          <b>Review<br />goals/concepts</b>
+        </div>
+      </a>
+    </div>
+  </div>
+</main>

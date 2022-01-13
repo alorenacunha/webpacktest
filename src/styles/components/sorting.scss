@@ -1,0 +1,261 @@
+
+
+
+.card {
+  width: 100%;
+  touch-action: none;
+  user-select: none;
+  font-size: 16px;
+  font-weight: bold;
+  color: black;
+
+  &.isPicked{
+    box-shadow: 8px 8px 5px 0 rgba(0, 0, 0, 0.5);
+  }
+
+}
+
+
+.card-container {
+  width: 230px;
+  height: 65px;
+  overflow: hidden;
+  margin: 7px auto;
+  border-radius: 10px;
+  box-sizing: border-box;
+}
+
+.full_card {
+  background: white;
+  box-shadow: 0 0 7px black;
+  text-align: center;
+  /*cursor: move;*/
+  /*border: 1px solid black;*/
+}
+
+.empty_card{
+  box-shadow: inset 2px 2px 2px 0 rgba(0, 0, 0, 0.5);
+}
+#right_item_list_front .empty_card {
+  background: $color__bg_card_placeholder;
+}
+
+#left_item_list_front .empty_card {
+  background: $color__bg_card_placeholder;
+}
+
+.item-list-content{
+  position: relative;
+}
+
+.card-pile-container{
+  margin: 170px 25px 0 25px;
+  position: relative;
+}
+.finish-message-wrap{
+  display: none;
+  position: absolute;
+  top: -30%;
+  left: 0;
+  width: 100%;
+  font-weight: bold;
+}
+.isFinished .card-pile-wrap{
+  display: none;
+}
+.isFinished .finish-message-wrap{
+  display: block;
+}
+
+.finish-flow{
+  margin-top: 30px;
+}
+.final_hint_container{
+  $width: 190px;
+  position: absolute;
+  top: -20px;
+  left: 50%;
+  font-size: 15px;
+  width: $width;
+  margin-left: - $width/2;
+  .arrow-to-left{
+    text-align: left;
+    position: relative;
+    left: -30px;
+    img {
+      transform: rotate(45deg);
+    }
+  }
+  .arrow-to-right{
+    text-align: right;
+    position: relative;
+    right: -30px;
+    img{
+      transform: rotate(-135deg);
+    }
+  }
+}
+
+.finish-message-check{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+}
+.finish-message-check img{
+  margin-right: 15px;
+}
+
+.cardInStack {
+  position: absolute;
+  margin-top: 0px;
+  margin-left: 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
+  box-shadow: 1px 1px 1px 0 rgba(0, 0, 0, 0.5);
+
+}
+
+.grid-stack .cardInStack {
+  position: static;
+}
+
+#cardsPile {
+  position: relative;
+  width: 250px;
+  height: 50px;
+  /*top: 350px;*/
+  /*left: 420px;*/
+
+  &:before{
+    // covers all cards except the first one, which we should be able to pick.
+    // Fisrt one also should have z-index same as this (750)
+    z-index: 750;
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 115%;
+    height: 150%;
+    background: transparent;
+  }
+
+  &.isEmpty{
+    &:before{
+      display: none;
+    }
+  }
+
+}
+
+.rotateCard {
+  position: absolute;
+  transform: rotate(-2deg);
+}
+
+.row.columns-container {
+  padding: 0;
+  margin: 20px auto;
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.column {
+  position: relative;
+  padding-top: 50px;
+}
+.column_title{
+  font-size: 24px;
+  margin: 0 auto;
+  height: 2.2em;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  left: -15%;
+  width: 130%;
+
+  border: 1px solid white;
+  padding: 0 5px;
+  border-radius: 5px;
+}
+
+
+.horizontal_container_center {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 20%;
+  position: absolute;
+}
+
+.horizontal_container {
+
+}
+
+.item_list_container {
+  position: relative;
+  border-radius: 35px;
+  padding: 25px 15px;
+  border: 3px solid white;
+  width: 250px;
+  margin: auto;
+}
+
+
+.item_list {
+  list-style: none;
+  position: relative;
+  z-index: 5;
+  padding: 0;
+}
+
+.cards-stack{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 500;
+}
+
+.empty_cards_container {
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  /*height: 100%;*/
+  /*width: 100%;*/
+  /*position: absolute;*/
+}
+
+.grid-stack {
+  position: relative;
+  z-index: 10;
+  padding: 0;
+  min-height: 350px;
+  background: rgba(0, 0, 0, 0.2);
+}
+
+
+.middle_arrow_container {
+  font-size: 20px;
+  color: white;
+  text-align: right;
+  letter-spacing: 1px;
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 10px;
+  font-family: $font_bebas;
+}
+
+#arrow {
+  position: relative;
+  width: 100px;
+}
+

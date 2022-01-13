@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="22px" height="28px" viewBox="0 0 22 28" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 58 (84663) - https://sketch.com -->
+    <title>InstructionsIcon</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="InstructionsIcon">
+            <rect id="Rectangle" fill="#000000" x="0" y="0" width="22" height="28" rx="2"></rect>
+            <rect id="Rectangle" fill="#FFFFFF" x="4" y="6" width="14" height="2" rx="1"></rect>
+            <rect id="Rectangle" fill="#FFFFFF" x="4" y="13" width="14" height="2" rx="1"></rect>
+            <rect id="Rectangle" fill="#FFFFFF" x="4" y="20" width="14" height="2" rx="1"></rect>
+        </g>
+    </g>
+</svg>

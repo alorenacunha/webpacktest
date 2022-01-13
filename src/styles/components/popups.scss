@@ -1,0 +1,117 @@
+
+
+.popups-container,
+.popup{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+}
+
+.popups-container{
+    background: rgba( 10,10,10, 0.15 );
+}
+
+.popup{
+    color: black;
+    /*visibility: visible;*/
+    width: 100%;
+    max-width: 700px;
+    height: auto;
+    overflow: hidden;
+    background: white;
+    border-radius: 30px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 5px 5px 5px 0 rgba(0, 0, 0, 0.5);
+}
+
+.hide {
+    visibility: hidden;
+    /*transform: scale(0);*/
+}
+
+
+.popup h1{
+    color: black;
+}
+
+.btn-start-play{
+    font-size: 25px;
+    padding: 15px 30px;
+}
+
+
+.read_instructions_btn_container{
+    margin: 20px auto;
+    text-align: right;
+}
+.read_instructions {
+    text-align: center;
+    font-size: 17px;
+    /*padding: 1% 2%;*/
+    cursor: pointer;
+    background: $color__default_bg;
+    display: inline-block;
+    /*border-radius: 30px;*/
+    /*position: absolute;*/
+    /*bottom: 15%;*/
+    /*right: 1%;*/
+    font-weight: bold;
+}
+
+#introduction_message_title,
+#introduction_message_text{
+    font-family: $font_quicksand;
+    font-weight: bold;
+}
+
+.note--has-no-suggested-answers{
+    font-family: $font_source-sans-pro;
+    font-size: 14px;
+}
+
+.blurred {
+    filter: blur(3px);
+}
+
+
+#finish_message_popup{
+    padding: 50px;
+    text-align: left;
+    font-family: $font_quicksand;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    .icon{
+        width: 200px;
+        margin-left: 15px;
+    }
+    img{
+        width: 100%;
+    }
+}
+
+
+
+//------------------------------------------------------------
+[data-popup="preparing_download"]{
+    h1{
+        font-family: $font_quicksand;
+        font-weight: bold;
+    }
+    .download_error_message{
+        display: flex;
+        box-sizing: border-box;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+        z-index: 1000;
+        background: white;
+        position: absolute;top: 0;left:0;width:100%;height:100%;
+    }
+}

@@ -1,0 +1,222 @@
+
+
+html,body{
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  margin: auto;
+  font-family: $font_quicksand;
+  font-weight: normal;
+  font-size: 16px;
+  color: white;
+
+  &.isLocked{
+
+    .card.draggable{
+      background: $color__incorrect_item;
+
+      &.isCorrect{
+        background: $color__correct_item;
+      }
+    }
+
+  }
+}
+
+.download_frame{
+  position: fixed;
+  bottom: -100%;
+  visibility: hidden;
+
+  //&.isMobile{
+  //  bottom: 0;
+  //  visibility: visible;
+  //  left: 0;
+  //  width: 100%;
+  //  height: 100%;
+  //  z-index: 10000;
+  //}
+}
+
+main{
+  background-color: #024A60;
+  background-image: url("../assets/img/PatternBackground@2x.jpg");
+  background-size: cover;
+  overflow: auto;
+  min-height: 100%;
+}
+
+.pageContainer {
+  /*height: 720px;*/
+  width: 950px;
+  position: relative;
+  margin: auto;
+}
+
+h1, h2, h3, h4, h5, h6{
+  font-family: $font_bebas;
+  color: white;
+  text-align: center;
+  font-weight: normal;
+}
+
+h3{
+  font-size: 30px;
+  margin-bottom: 0;
+}
+
+h2 {
+  font-size: 30px;
+  color: white;
+  text-align: center;
+}
+
+h4 {
+}
+
+p {
+  font-size: 20px;
+  text-align: center;
+  letter-spacing: 1px;
+}
+
+button{
+  appearance: none;
+  border: none;
+  outline: none;
+}
+
+#worksheet_title,
+#worksheet_desc_text{
+  font-family: $font_quicksand;
+  font-weight: bold;
+}
+
+#worksheet_desc_text{
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.btn{
+  display: inline-block;
+  box-shadow: 5px 5px 5px 0 rgba(0, 0, 0, 0.5);
+  font-family: $font_source-sans-pro;
+  border-radius: 36px;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  color: black;
+  background: $color__default_bg;
+  text-decoration: none;
+}
+
+.btn-content{
+  display: flex;
+  justify-content: space-between;
+}
+.btn-content img{
+  margin-right: 12px;
+}
+
+.btn-ok,.btn-green{
+  background-color: $color__green;
+}
+.btn-warn,.btn-yellow{
+  background-color: $color__yellow;
+}
+.btn-red{
+  background-color: $color__red;
+}
+
+.btn-download-pdf{
+  vertical-align: middle;
+}
+
+.download-icon{
+  display: inline-block;
+  background: url("../assets/img/download.svg") no-repeat center;
+  background-size: contain;
+  width: 1.6em;
+  height: 1em;
+  //vertical-align: middle;
+}
+
+
+.final-popup-buttons{
+  min-width: 500px;
+  .btn{
+    vertical-align: middle;
+    margin-right: 1em;
+  }
+}
+
+/* 1024 x 768, top h:48, container h:720 */
+.top_bar {
+  margin: 0;
+  background-color: #1085A8;
+  width: 100%;
+  font-size: 32px;
+  color: white;
+  text-align: center;
+  line-height: 1.5;
+  letter-spacing: 7px;
+  font-family: $font_quicksand;
+  font-weight: bold;
+}
+
+
+.card{
+  // https://stackoverflow.com/questions/6492027/css-transform-jagged-edges-in-chrome
+  -webkit-backface-visibility: hidden;
+  outline: 1px solid transparent;
+
+  .card-text{
+    overflow: hidden;
+    -webkit-font-smoothing: subpixel-antialiased;
+
+    // IE 10 needs this
+    display: inline-block;
+
+    // need for text fitting
+    max-width: 100%;
+    max-height: 100%;
+  }
+
+}
+
+.answer_holder{
+  box-shadow: inset 2px 2px 2px 0 rgba(0, 0, 0, 0.5);
+  background: $color__bg_card_placeholder;
+}
+
+.finish-message-check img{
+  width: 1.5em;
+  height: auto;
+}
+
+
+.score-container{
+  background: $color__bg_card_placeholder;
+  border-radius: 10px;
+  padding: 1em;
+  text-align: center;
+  max-width: 150px;
+  margin: 0 auto 30px auto;
+
+
+  img{
+    width: 1.75em;
+    vertical-align: middle;
+  }
+
+  span{
+    vertical-align: middle;
+  }
+
+  .score{
+    margin: 10px auto;
+  }
+}

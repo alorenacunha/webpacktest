@@ -1,0 +1,181 @@
+.wheel-container {
+  text-align: center;
+  margin: auto;
+  position: relative;
+}
+
+.wheel-wrap {
+  position: relative;
+  display: inline-block;
+}
+
+#wheel {
+  display: block;
+  margin: 0;
+  padding: 0;
+  border-radius: 50%;
+  position: relative;
+  z-index: 10;
+  //border: solid 10px #ffffff;
+  box-sizing: border-box;
+  width: 400px;
+  height: 400px;
+}
+
+#wheel-back {
+  //border: solid 10px #ffffff;
+  border-radius: 50%;
+  box-sizing: border-box;
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+#wheel-front {
+  // size and margins should be set via JS to make everything nice and centered
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
+.wheel-label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  overflow: hidden;
+}
+.wheel-label-text {
+  font-size: 18px;
+  font-weight: bold;
+  color: black;
+  //height: 5.6em;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  user-select: none;
+}
+
+.wheel-arrow {
+  $width: 25px;
+  $height: 50px;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -$height - 20px;
+  margin-left: -$width / 2;
+  z-index: 999;
+
+  width: 0;
+  height: 0;
+  border-left: $width / 2 solid transparent;
+  border-right: $width / 2 solid transparent;
+
+  border-bottom: $height solid #cc2424;
+}
+
+.wheel-shadow {
+  z-index: 1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  box-shadow: 8px 8px 10px 0 rgba(0, 0, 0, 0.5);
+}
+
+.finish-and-review-wrap {
+  display: none;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.hint_container {
+  position: absolute;
+  top: 30%;
+  right: 70px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+
+  img {
+    position: relative;
+    top: -60px;
+  }
+}
+.hint_message {
+  font-weight: bold;
+  margin-left: 10px;
+  font-size: 18px;
+}
+
+.finish-message-check {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  margin-right: 15px;
+
+  img {
+    margin-right: 15px;
+  }
+}
+
+// POPUPs
+#wheel_spin_result {
+  border-width: 8px;
+  border-style: solid;
+  border-color: transparent;
+  text-align: center;
+  color: black;
+  padding: 25px 50px;
+
+  h2,
+  h3,
+  p {
+    font-family: $font_quicksand;
+    color: inherit;
+    text-align: center;
+    font-weight: bold;
+  }
+
+  h3 {
+    font-size: 18px;
+  }
+
+  .wheel_spin_title {
+    position: relative;
+    padding: 8px;
+    font-size: 25px;
+
+    .result_text_background {
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border-radius: 10px;
+      opacity: 0.5;
+      z-index: 1;
+    }
+
+    .result_text {
+      position: relative;
+      z-index: 2;
+    }
+  }
+}
+
+#wheel_spin_review {
+  font-weight: bold;
+
+  button {
+    margin: 0 15px;
+  }
+}
